@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Floating Center Buttons</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    .floating-center {
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      z-index: 50;
+    }
+  </style>
+</head>
+<body class="bg-gray-100">
+
+  <div id="floatingSection" class="floating-center bg-white p-6 rounded-2xl shadow-xl border w-72 space-y-3 text-center">
+    <!-- Floating Buttons -->
+    <a href="https://example.com/home" target="_blank" class="editable-btn block bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2 rounded">Home</a>
+    <a href="https://example.com/projects" target="_blank" class="editable-btn block bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2 rounded">Projects</a>
+    <a href="https://example.com/contact" target="_blank" class="editable-btn block bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2 rounded">Contact</a>
+
+    <!-- Small Edit Button -->
+    <button onclick="showPasswordPrompt()" class="text-[10px] bg-gray-300 hover:bg-gray-400 text-black px-2 py-1 rounded">
+      Edit
+    </button>
+
+    <!-- Password Input Panel -->
+    <div id="passwordPanel" class="hidden space-y-2">
+      <input id="passwordInput" type="password" placeholder="Enter password" class="w-full border px-2 py-1 rounded text-sm" />
+      <button onclick="checkPassword()" class="w-full bg-blue-500 hover:bg-blue-600 text-white py-1 rounded text-sm">Submit</button>
+    </div>
+
+    <!-- Edit Panel -->
+    <div id="editPanel" class="hidden space-y-2">
+      <input type="text" id="newButtonText" placeholder="Button Text" class="w-full border px-2 py-1 rounded text-sm">
+      <input type="text" id="newButtonLink" placeholder="Button Link" class="w-full border px-2 py-1 rounded text-sm">
+      <button onclick="addButton()" class="w-full bg-green-600 hover:bg-green-700 text-white py-1 rounded text-sm">Add Button</button>
+
+      <hr class="my-2" />
+      <select id="buttonSelector" class="w-full border px-2 py-1 rounded text-sm"></select>
+      <input type="text" id="editLink" placeholder="New Link" class="w-full border px-2 py-1 rounded text-sm">
+      <button onclick="updateLink()" class="w-full bg-yellow-500 hover:bg-yellow-600 text-white py-1 rounded text-sm">Update Link</button>
+    </div>
+  </div>
+
+  <script>
+    function showPasswordPrompt() {
+      // Show the password panel immediately without confirmation popup
+      document.getElementById("passwordPanel").classList.remove("hidden");
+    }
+
+    function checkPassword() {
+      const entered = document.getElementById("passwordInput").value;
+      if (entered === "ajith.2006") {
+        document.getElementById("editPanel").classList.remove("hidden");
+        document.getElementById("passwordPanel").classList.add("hidden");
+        populateDropdown();
+      } else {
+        alert("Incorrect password!");
+      }
+    }
+
+    function populateDropdown() {
+      const buttons = document.querySelectorAll(".editable-btn");
+      const selector = document.getElementById("buttonSelector");
+      selector.innerHTML = "";
+      buttons.forEach((btn, i) => {
+        const option = document.createElement("option");
+        option.value = i;
+        option.textContent = btn.textContent;
+        selector.appendChild(option);
+      });
+    }
+
+    function addButton() {
+      const text = document.getElementById("newButtonText").value.trim();
+      const link = document.getElementById("newButtonLink").value.trim();
+      if (text && link) {
+        const a = document.createElement("a");
+        a.href = link;
+        a.target = "_blank";
+        a.className = "editable-btn block bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2 rounded";
+        a.textContent = text;
+        const section = document.getElementById("floatingSection");
+        section.insertBefore(a, section.querySelector("button"));
+        document.getElementById("newButtonText").value = "";
+        document.getElementById("newButtonLink").value = "";
+        populateDropdown();
+      } else {
+        alert("Fill both fields.");
+      }
+    }
+
+    function updateLink() {
+      const index = document.getElementById("buttonSelector").value;
+      const newLink = document.getElementById("editLink").value.trim();
+      const buttons = document.querySelectorAll(".editable-btn");
+      if (buttons[index] && newLink) {
+        buttons[index].href = newLink;
+        alert("Link updated!");
+        document.getElementById("editLink").value = "";
+      } else {
+        alert("Invalid input.");
+      }
+    }
+  </script>
+
+</body>
+</html>

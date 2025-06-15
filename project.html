@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>AJITH.R | Data Analyst Portfolio</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&amp;display=swap" rel="stylesheet" />
+  </style>
+    
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+    }
+
+    .floating-btn {
+      @apply fixed bottom-6 right-6 bg-blue-700 text-white p-4 rounded-full shadow-xl hover:bg-blue-800 transition-transform transform hover:scale-110;
+    }
+
+section:target {
+  scroll-margin-top: 300px;
+}
+
+
+    .institution-logo-bar {
+      position: fixed;
+      top: 50%;
+      right: 0.5rem;
+      transform: translateY(-50%);
+      display: flex;
+      flex-direction: column;
+      gap: 0.75rem;
+      z-index: 40;
+    }
+
+    .institution-logo-bar img {
+      width: 40px;
+      height: 40px;
+      border-radius: 9999px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+      transition: transform 0.3s ease;
+    }
+
+    .institution-logo-bar img:hover {
+      transform: scale(1.1);
+    }
+  </style>
+ <!-- Add this CSS inside the <head> -->
+<style>
+  /* Animation for highlighting the target section */
+  [id^="project"]:target {
+    animation: highlight 1.5s ease;
+  }
+  
+  @keyframes highlight {
+    0% { background-color: rgba(59, 130, 246, 0.2); }
+    100% { background-color: transparent; }
+  }
+</style>
+
+<!-- Add this JavaScript at the bottom before </body> -->
+<script>
+  // Function to center the element
+  function centerElement(target) {
+    const y = target.getBoundingClientRect().top + 
+              window.scrollY - 
+              (window.innerHeight / 2);
+    window.scrollTo({top: y, behavior: 'smooth'});
+  }
+
+  // Handle page load with hash
+  document.addEventListener('DOMContentLoaded', function() {
+    if(window.location.hash.startsWith('#project')) {
+      const target = document.querySelector(window.location.hash);
+      if(target) {
+        setTimeout(() => centerElement(target), 100);
+      }
+    }
+  });
+
+  // Handle in-page clicks
+  document.querySelectorAll('a[href^="#project"]').forEach(link => {
+    link.addEventListener('click', function(e) {
+      const target = document.querySelector(this.getAttribute('href'));
+      if(target) {
+        e.preventDefault();
+        centerElement(target);
+        // Update URL without jumping
+        history.pushState(null, null, this.getAttribute('href'));
+      }
+    });
+  });
+</script>
+<style>
+  /* Add this code to your existing style section */
+  [id^="section"]:target {
+    animation: highlight 1.5s ease;
+  }
+  
+  @keyframes highlight {
+    0% { background-color: rgba(59, 130, 246, 0.2); }
+    100% { background-color: transparent; }
+  }
+</style>
+</head>
+
+
+
+<body class="bg-gray-100 text-gray-900">
+
+  <!-- Header -->
+  <nav class="bg-white shadow sticky top-0 z-50">
+    <header>
+
+<!-- Blue Home Button with White Background -->
+<div class="fixed top-4 left-4 z-50">
+  <a href="home.html" title="Home"
+     class="group flex items-center space-x-2 text-1xl font-extrabold text-blue-800 bg-white px-5 py-2 rounded-full shadow-md border border-blue-800 hover:bg-blue-800 hover:text-white transition duration-300">
+
+    <!-- Blue Home SVG Icon -->
+    <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-blue-800 group-hover:text-white transition duration-300" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+        d="M3 12l9-9 9 9M4 10v10a1 1 0 001 1h6m8-11v10a1 1 0 01-1 1h-6" />
+    </svg>
+
+    <!-- Label -->
+    <span class="group-hover:text-white transition duration-300">Home</span>
+  </a>
+</div>
+
+
+
+<!-- Eye-Catching Resume Download Button -->
+<div class="fixed top-4 right-4 z-50">
+  <a href="https://1drv.ms/f/c/ccf41c87f4c9b722/EshYSDsouJNJgzfVEhhLsoABqOuQ4C5XQX-aeNIXdH7uFg?e=YvXPKd" download title="Download Resume"
+     class="flex items-center space-x-2 text-1xl font-extrabold text-blue-800 bg-white px-5 py-2 rounded-full shadow-md border border-blue-800 hover:bg-blue-800 hover:text-white animate-bounce hover:scale-105 transition duration-300">
+
+    <!-- SVG Download Icon -->
+    <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+        d="M4 16v1a2 2 0 002 2h12a2 2 0 002-2v-1M7 10l5 5 5-5M12 15V3" />
+    </svg>
+
+    <!-- Label -->
+    <span>Resume</span>
+  </a>
+</div>
+
+
+
+      <div class="container mx-auto px-0 py-2 text-center">
+        <h1 class="text-5xl font-extrabold text-blue-800">AJITH R | DATA ANALYST</h1>
+        <p class="text-xl text-gray-600 mt-2">
+          Unlocking data-driven insights with the power of Gen AI to shape smarter, faster decisions.
+        </p>
+      </div>
+
+      <div class="container mx-auto px-6 py-4 mb-8 flex justify-center space-x-4">
+       
+        <a href="home.html#skills" class="text-1xl  font-extrabold text-blue-800 bg-white px-5 py-2 rounded-full shadow-md border border-blue-800 hover:bg-blue-800 hover:text-white transition duration-300">
+          Skills
+        </a>
+        <a href="home.html#projects" class="text-1xl  font-extrabold text-blue-800 bg-white px-5 py-2 rounded-full shadow-md border border-blue-800 hover:bg-blue-800 hover:text-white transition duration-300 " >
+          Projects &amp; Experience
+        </a>
+        <a href="home.html#certifications" class="text-1xl font-extrabold text-blue-800 bg-white px-5 py-2 rounded-full shadow-md border border-blue-800 hover:bg-blue-800 hover:text-white transition duration-300">
+          Certifications
+        </a>
+        <a href="home.html#contact" class="text-1xl font-extrabold text-blue-800 bg-white px-5 py-2 rounded-full shadow-md border border-blue-800 hover:bg-blue-800 hover:text-white transition duration-300">
+          Reach out
+        </a>
+       
+      </div>
+     
+    </header>
+  </nav>
+
+<!-- Remove the spacer div completely -->
+
+<!-- Section 1 -->
+<section id="section1" class="py-10 px-6 bg-gradient-to-r from-blue-50 to-blue-100">
+  <h2 class="text-3xl font-bold text-center mb-6 text-blue-900">Microsoft Excel</h2>
+  
+  <!-- Project 1 -->
+  <div id="project1" class="relative max-w-4xl mx-auto bg-white shadow-lg rounded-xl p-6 mt-10">
+    <img src="https://img.icons8.com/color/48/000000/microsoft-excel-2019--v1.png" class="absolute top-4 right-16 w-12 h-12" title="Excel" /><br>
+    <img src="https://img.icons8.com/color/48/000000/power-bi.png" class="absolute top-4 right-6 w-12 h-12" title="Power BI" />
+    <p class="text-lg font-bold text-gray-800">AtliQ Sales Report</p>
+    <p class="text-sm text-gray-600 mt-1">
+      Designed interactive sales performance dashboards using Power BI.<br>
+      Leveraged Power Query, Pivot, and DAX for data modeling and KPIs.<br>
+      Compared regional market performance against targets.<br>
+      Delivered actionable insights to support data-driven decision making.
+    </p>
+    <div class="flex justify-end">
+      <a href="https://1drv.ms/f/c/ccf41c87f4c9b722/EoRUuV7asVhKn00kVC6GjSMBj_doa5ycc1pLC2ItySLXqA?e=IfuGyx" class="mt-3 bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700">View Project</a>
+    </div>
+  </div>
+
+  <!-- Project 2 -->
+  <div id="project2" class="relative max-w-4xl mx-auto bg-white shadow-lg rounded-xl p-6 mt-10">
+    <img src="https://img.icons8.com/color/48/000000/microsoft-excel-2019--v1.png" class="absolute top-4 right-6 w-12 h-12" title="Excel" />
+    <p class="text-lg font-bold text-gray-800">AtliQ Finance Report</p>
+    <p class="text-sm text-gray-600 mt-1">
+      Created financial reports including Profit & Loss and variance analysis.<br>
+      Demonstrated financial storytelling to improve strategic planning.<br>
+      Streamlined Excel-based reporting processes with formulas and automation.<br>
+      Communicated key insights effectively to stakeholders.
+    </p>
+    <div class="flex justify-end">
+      <a href="https://1drv.ms/f/c/ccf41c87f4c9b722/ElyWFhPKDLBDj2Cauy59a40BnSoRl-UBeToCJUieDkwPjg?e=5gWPQf" class="mt-3 bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700">View Project</a>
+    </div>
+  </div>
+</section>
+
+<!-- Section 2 -->
+<section id="section2" class="py-10 px-6 bg-gradient-to-r from-green-50 to-green-100">
+  <h2 class="text-3xl font-bold text-center mb-6 text-green-900">My SQL</h2>
+  
+  <!-- Project 4 -->
+  <div id="project4" class="relative max-w-4xl mx-auto bg-white shadow-lg rounded-xl p-6 mt-10">
+    <img src="https://pngimg.com/uploads/mysql/mysql_PNG22.png" class="absolute top-4 right-6 w-12 h-12" title="SQL" />
+    <p class="text-lg font-bold text-gray-800">Finance & Top N Insights (SQL)</p>
+    <p class="text-sm text-gray-600 mt-1">
+      Used advanced SQL to automate financial reporting in the CPG domain.<br>
+      Built stored procedures, UDFs, and views for efficient data analysis.<br>
+      Delivered key insights on top-performing segments and KPIs.<br>
+      Strengthened SQL optimization for large-scale reporting pipelines.
+    </p>
+    <div class="flex justify-end">
+      <a href="https://1drv.ms/f/c/ccf41c87f4c9b722/EjTMVlKZtLtAtz58SbeJUIIB-k8SyufOczzMUDaHMEcbTA?e=eUOvdv" class="mt-3 bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700">View Project</a>
+    </div>
+  </div>
+
+  <!-- Project 5 -->
+  <div id="project5" class="relative max-w-4xl mx-auto bg-white shadow-lg rounded-xl p-6 mt-10">
+    <img src="https://pngimg.com/uploads/mysql/mysql_PNG22.png" class="absolute top-4 right-6 w-12 h-12" title="SQL" />
+    <p class="text-lg font-bold text-gray-800">Supply Chain Analytics</p>
+    <p class="text-sm text-gray-600 mt-1">
+      Conducted error analysis for demand forecasting using SQL.<br>
+      Created helper tables and optimized queries with triggers.<br>
+      Evaluated supply chain KPIs like forecast accuracy and fulfillment rate.<br>
+      Improved model performance through calculated absolute error metrics.
+    </p>
+    <div class="flex justify-end">
+      <a href="https://1drv.ms/f/c/ccf41c87f4c9b722/EnpfdVjrk-dCgyGXGJjor00B98pW4xUTnr8j9BHNRLcCVg?e=eU3GXm" class="mt-3 bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700">View Project</a>
+    </div>
+  </div>
+</section>
+
+<!-- Section 3 -->
+<section id="section3" class="py-10 px-6 bg-gradient-to-r from-yellow-50 to-yellow-100">
+  <h2 class="text-3xl font-bold text-center mb-6 text-yellow-900">Power BI</h2>
+  
+  <!-- Project 3 -->
+  <div id="project3" class="relative max-w-4xl mx-auto bg-white shadow-lg rounded-xl p-6 mt-10">
+    <img src="https://img.icons8.com/color/48/000000/power-bi.png" class="absolute top-4 right-6 w-12 h-12" title="Power BI" />
+    <p class="text-lg font-bold text-gray-800">Business Insights 360</p>
+    <p class="text-sm text-gray-600 mt-1">
+      Simulated real-world analytics project covering multiple business domains.<br>
+      Built end-to-end dashboards in Power BI based on mock client requirements.<br>
+      Practiced project environment setup, reporting, and delivery lifecycle.<br>
+      Gained exposure to stakeholder communication and agile workflows.
+    </p>
+    <div class="flex justify-end">
+      <a href="https://1drv.ms/f/c/ccf41c87f4c9b722/ErJnUb6ei7JKuFG3cOFGLygBPTWVJB0ST2O2tLmyGtwWNw?e=WVmaOT" class="mt-3 bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700">View Project</a>
+    </div>
+  </div> 
+  
+  <!-- Project 8 -->
+  <div id="project8" class="relative max-w-4xl mx-auto bg-white shadow-lg rounded-xl p-6 mt-10">
+    <img src="https://img.icons8.com/color/48/000000/power-bi.png" class="absolute top-4 right-6 w-12 h-12" title="Power BI" />
+    <p class="text-lg font-bold text-gray-800">Telecom KPI Analysis</p>
+    <p class="text-sm text-gray-600 mt-1">
+      Evaluated 5G launch impact for a telecom company (Wavecon).<br>
+      Analyzed pre- and post-launch KPIs like ARPU, TAU, and churn rate.<br>
+      Developed a structured KPI comparison dashboard.<br>
+      Presented insights via a stakeholder-focused summary on LinkedIn.
+    </p>
+    <div class="flex justify-end">
+      <a href="https://1drv.ms/f/c/ccf41c87f4c9b722/EviUoCHtgMhJhaZGtK75PXEBh2y4OwfhJ7z-zu6_XfJ6KA?e=0WCJg6" class="mt-3 bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700">View Project</a>
+    </div>
+  </div>
+
+  <!-- Project 9 -->
+  <div id="project9" class="relative max-w-4xl mx-auto bg-white shadow-lg rounded-xl p-6 mt-10">
+    <img src="https://img.icons8.com/color/48/000000/power-bi.png" class="absolute top-4 right-6 w-12 h-12" title="Power BI" />
+    <p class="text-lg font-bold text-gray-800">Insurance Industry Dashboard</p>
+    <p class="text-sm text-gray-600 mt-1">
+      Created a Power BI dashboard to analyze insurance industry metrics.<br>
+      Utilized DAX and data modeling to visualize customer segments.<br>
+      Focused on revenue trends, risk factors, and customer retention.<br>
+      Delivered insights tailored to underwriting and strategy teams.
+    </p>
+    <div class="flex justify-end">
+      <a href="https://1drv.ms/f/c/ccf41c87f4c9b722/Ej_EZq-LX0BHqSZDuWsljkABOufirj_Y7LREOQBqBlE7-A?e=lyn63J" class="mt-3 bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700">View Project</a>
+    </div>
+  </div>
+
+  <!-- Project 10 -->
+  <div id="project10" class="relative max-w-4xl mx-auto bg-white shadow-lg rounded-xl p-6 mt-10">
+    <img src="https://bing.com/th/id/BCO.831232bb-eac4-43e1-bfc5-e9c17aef6190.png" class="absolute top-4 right-16 w-12 h-12" title="Power BI" />
+    class="absolute top-4 right-6 w-6 h-6" title="Microsoft Fabric" />
+    <p class="text-lg font-bold text-gray-800">Microsoft Fabric Pilot Project</p>
+    <p class="text-sm text-gray-600 mt-1">
+      Migrated Power BI dashboards into the Microsoft Fabric ecosystem.<br>
+      Utilized Dataflows, OneLake, and Pipelines for ETL orchestration.<br>
+      Gained experience with Lakehouse architecture and Fabric features.<br>
+      Built scalable data workflows tailored for enterprise analytics.
+    </p>
+    <div class="flex justify-end">
+      <a href="https://1drv.ms/f/c/ccf41c87f4c9b722/EoSbBaHVvUVKm7V3-JPrA8cBYTVXENb4TUgmN_4rAeqFhg?e=HQqccY" class="mt-3 bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700">View Project</a>
+    </div>
+  </div>
+</section>
+
+<!-- Section 4 -->
+<section id="section4" class="py-10 px-6 bg-gradient-to-r from-purple-50 to-purple-100">
+  <h2 class="text-3xl font-bold text-center mb-6 text-purple-900">Python</h2>
+  
+  <!-- Project 6 -->
+  <div id="project6" class="relative max-w-4xl mx-auto bg-white shadow-lg rounded-xl p-6 mt-10">
+    <img src="https://img.icons8.com/color/48/000000/python--v1.png" class="absolute top-4 right-6 w-12 h-12" title="Python" />
+    <p class="text-lg font-bold text-gray-800">Hospitality Data Analysis</p>
+    <p class="text-sm text-gray-600 mt-1">
+      Performed in-depth hotel industry analysis using Python and Pandas.<br>
+      Conducted EDA, transformation, and visual storytelling for key trends.<br>
+      Analyzed operational data to uncover insights on revenue and occupancy.<br>
+      Applied statistical methods to support data-driven recommendations.
+    </p>
+    <div class="flex justify-end">
+      <a href="https://1drv.ms/f/c/ccf41c87f4c9b722/EuA94xjW3d1FrPfiGZmSUIgB38ZQ9TvdJgnpFGsmWEO3Dw?e=wo48wP" class="mt-3 bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700">View Project</a>
+    </div>
+  </div>
+
+  <!-- Project 7 -->
+  <div id="project7" class="relative max-w-4xl mx-auto bg-white shadow-lg rounded-xl p-6 mt-10">
+    <img src="https://bing.com/th/id/BCO.7cee4376-00d4-4e43-bd3d-797fc62c88c8.png" class="absolute top-4 right-24 w-12 h-12" title="Python" />
+    <p class="text-lg font-bold text-gray-800">Expense Tracking System</p>
+    <p class="text-sm text-gray-600 mt-1">
+      Built a full-stack expense tracking app using Python, FastAPI & MySQL.<br>
+      Developed a Streamlit-based UI for real-time data visualization.<br>
+      Enabled users to categorize, filter, and monitor expenses efficiently.<br>
+      Implemented analytics on monthly and category-wise breakdowns.
+    </p>
+    <div class="flex justify-end">
+      <a href="https://1drv.ms/f/c/ccf41c87f4c9b722/Ei5LYEGtXSlEtn8FuYPO1U0BvFGtY8KxfXSZulLk2HbvmQ?e=zllnLo" class="mt-3 bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700">View Project</a>
+    </div>
+  </div>
+</section>
+
+  <!-- Floating Institution Logos -->
+  <div class="institution-logo-bar">
+     <style>
+  section:target {
+    scroll-margin-top: 180px;
+  }
+</style>
+
+    <a href="#section1" class="scroll-mt-40" >
+      <img src=" https://www.bing.com/th/id/OIP.b7tMc3NAORU-T_jzqp4NhQHaHa?w=181&h=211&c=8&rs=1&qlt=90&o=6&dpr=1.7&pid=3.1&rm=2" alt="Zion Logo" />
+    </a>
+    <a href="#section2" class="scroll-mt-40">
+      <img src="https://pngimg.com/uploads/mysql/mysql_PNG22.png " alt="Sathyabama Logo" />
+    </a>
+    <a href="#section3" class="scroll-mt-40">
+      <img src="https://www.bing.com/th/id/OIP.B5PP_fV-GI3092nNHFws7gHaFf?w=240&h=211&c=8&rs=1&qlt=90&o=6&dpr=1.7&pid=3.1&rm=2" alt="Codebasics Logo" />
+    </a>
+    <a href="#section4" class="scroll-mt-40">
+      <img src="https://www.bing.com/th/id/OIP.X6P8DCrU0nZ3OsmnTRHyHgHaHa?w=204&h=211&c=8&rs=1&qlt=90&o=6&dpr=1.7&pid=3.1&rm=2" alt="Anglo Logo" />
+    </a>
+  </div>
+</div>
+  <!-- Scroll to Top Button -->
+  <a href="#" id="scrollTopBtn" class="floating-btn fixed bottom-6 right-6 bg-blue-700 text-white px-4 py-2 rounded-full shadow-lg hover:bg-blue-800 transition duration-300 z-50 hidden">
+    ↑ Top
+  </a>
+
+<script>
+  // Function to center any element on screen
+  function centerElement(target) {
+    const y = target.getBoundingClientRect().top + 
+              window.scrollY - 
+              (window.innerHeight / 2);
+    window.scrollTo({top: y, behavior: 'smooth'});
+  }
+
+  // Run when page finishes loading
+  document.addEventListener('DOMContentLoaded', function() {
+    // Handle institution sections on page load
+    if(window.location.hash.startsWith('#section')) {
+      const target = document.querySelector(window.location.hash);
+      if(target) {
+        setTimeout(() => centerElement(target), 100);
+      }
+    }
+    
+    // Handle project sections on page load
+    if(window.location.hash.startsWith('#project')) {
+      const target = document.querySelector(window.location.hash);
+      if(target) {
+        setTimeout(() => centerElement(target), 100);
+      }
+    }
+    
+    // Make floating institution buttons center sections
+    document.querySelectorAll('.institution-logo-bar a').forEach(link => {
+      link.addEventListener('click', function(e) {
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute('href'));
+        if(target) {
+          centerElement(target);
+          history.pushState(null, null, this.getAttribute('href'));
+        }
+      });
+    });
+    
+    // Make project links center sections
+    document.querySelectorAll('a[href^="#project"]').forEach(link => {
+      link.addEventListener('click', function(e) {
+        if(window.location.pathname.includes('project.html')) {
+          e.preventDefault();
+          const target = document.querySelector(this.getAttribute('href'));
+          if(target) {
+            centerElement(target);
+            history.pushState(null, null, this.getAttribute('href'));
+          }
+        }
+      });
+    });
+  });
+  
+  // Scroll to top button functionality
+  const scrollTopBtn = document.getElementById('scrollTopBtn');
+  scrollTopBtn.addEventListener('click', (e) => {
+    e.preventDefault();
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+    document.body.focus();
+  });
+  window.addEventListener('scroll', () => {
+    scrollTopBtn.classList.toggle('hidden', window.scrollY <= 300);
+    scrollTopBtn.classList.toggle('flex', window.scrollY > 300);
+  });
+</script>
+
+  <!-- Footer -->
+  <footer class="text-center py-6 bg-blue-800 text-white mt-10">
+    <p>&copy; 2025 Ajith R. All Rights Reserved.</p>
+  </footer>
+</body>
+</html>

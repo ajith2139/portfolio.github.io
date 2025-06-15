@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Floating Section</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 h-screen flex items-center justify-center">
+
+  <!-- Centered Section -->
+  <div class="bg-white shadow-lg rounded-xl p-4 space-y-3 border border-gray-200 w-11/12 max-w-xs">
+    <h2 class="text-center font-semibold text-lg text-gray-800">View My</h2>
+
+    <!-- Floating Buttons -->
+    <a id="portfolioBtn" href="#" target="_blank"
+       class="block bg-blue-500 text-white text-center rounded-lg py-2 hover:bg-blue-600 transition">
+      Portfolio
+    </a>
+    <a id="resumeBtn" href="#" target="_blank"
+       class="block bg-green-500 text-white text-center rounded-lg py-2 hover:bg-green-600 transition">
+      Resume
+    </a>
+
+    <!-- Edit Button -->
+    <button onclick="toggleEdit()" class="text-xs text-blue-600 underline hover:text-blue-800">
+      Edit
+    </button>
+
+    <!-- Hidden Edit Form -->
+    <div id="editForm" class="hidden mt-2 space-y-2">
+      <input type="password" id="passKey" placeholder="Enter pass key"
+             class="w-full px-2 py-1 border rounded text-sm" />
+      <input type="url" id="newPortfolio" placeholder="New Portfolio Link"
+             class="w-full px-2 py-1 border rounded text-sm" disabled />
+      <input type="url" id="newResume" placeholder="New Resume Link"
+             class="w-full px-2 py-1 border rounded text-sm" disabled />
+      <button id="unlockButton" onclick="verifyKey()" class="w-full bg-yellow-500 text-white py-1 rounded hover:bg-yellow-600 text-sm">
+        Unlock Edit
+      </button>
+      <button id="saveButton" onclick="saveLinks()" class="w-full bg-blue-500 text-white py-1 rounded hover:bg-blue-600 text-sm hidden">
+        Save
+      </button>
+    </div>
+  </div>
+
+  <script>
+    // Load saved links from localStorage on page load
+    window.onload = function () {
+      const savedPortfolio = localStorage.getItem('portfolioLink');
+      const savedResume = localStorage.getItem('resumeLink');
+      if (savedPortfolio) document.getElementById('portfolioBtn').href = savedPortfolio;
+      if (savedResume) document.getElementById('resumeBtn').href = savedResume;
+    };
+
+    function toggleEdit() {
+      const form = document.getElementById('editForm');
+      form.classList.toggle('hidden');
+    }
+
+    function verifyKey() {
+      const key = document.getElementById('passKey').value;
+      const portfolioInput = document.getElementById('newPortfolio');
+      const resumeInput = document.getElementById('newResume');
+      const saveButton = document.getElementById('saveButton');
+      const unlockButton = document.getElementById('unlockButton');
+
+      if (key === "ajith.2139") {
+        portfolioInput.disabled = false;
+        resumeInput.disabled = false;
+        saveButton.classList.remove('hidden');
+        unlockButton.classList.add('hidden');
+      } else {
+        alert("Incorrect pass key.");
+      }
+    }
+
+    function saveLinks() {
+      const newPortfolio = document.getElementById('newPortfolio').value;
+      const newResume = document.getElementById('newResume').value;
+
+      if (newPortfolio) {
+        document.getElementById('portfolioBtn').href = newPortfolio;
+        localStorage.setItem('portfolioLink', newPortfolio);
+      }
+      if (newResume) {
+        document.getElementById('resumeBtn').href = newResume;
+        localStorage.setItem('resumeLink', newResume);
+      }
+      alert("Links updated and saved successfully.");
+      toggleEdit();
+    }
+  </script>
+</body>
+</html>
+

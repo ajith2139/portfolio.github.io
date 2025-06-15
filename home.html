@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>AJITH.R | Data Analyst Portfolio</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&amp;display=swap" rel="stylesheet" />
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+    }
+
+    .floating-btn {
+      @apply fixed bottom-6 right-6 bg-blue-700 text-white p-4 rounded-full shadow-xl hover:bg-blue-800 transition-transform transform hover:scale-110;
+    }
+  </style>
+    <style>
+  section:target {
+    scroll-margin-top: 180px;
+  }
+</style>
+
+</head>
+
+<body class="bg-gray-100 text-gray-900">
+
+  <!-- Header -->
+  <nav class="bg-white shadow sticky top-0 z-50">
+    <header>
+
+<!-- Blue Home Button with White Background -->
+<div class="fixed top-4 left-4 z-50">
+  <a href="home.html" title="Home"
+     class="group flex items-center space-x-2 text-1xl font-extrabold text-blue-800 bg-white px-5 py-2 rounded-full shadow-md border border-blue-800 hover:bg-blue-800 hover:text-white transition duration-300">
+
+    <!-- Blue Home SVG Icon -->
+    <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-blue-800 group-hover:text-white transition duration-300" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+        d="M3 12l9-9 9 9M4 10v10a1 1 0 001 1h6m8-11v10a1 1 0 01-1 1h-6" />
+    </svg>
+
+    <!-- Label -->
+    <span class="group-hover:text-white transition duration-300">Home</span>
+  </a>
+</div>
+
+
+
+<!-- Eye-Catching Resume Download Button -->
+<div class="fixed top-4 right-4 z-50">
+  <a href="https://1drv.ms/f/c/ccf41c87f4c9b722/EshYSDsouJNJgzfVEhhLsoABqOuQ4C5XQX-aeNIXdH7uFg?e=YvXPKd" download title="Download Resume"
+     class="flex items-center space-x-2 text-1xl font-extrabold text-blue-800 bg-white px-5 py-2 rounded-full shadow-md border border-blue-800 hover:bg-blue-800 hover:text-white animate-bounce hover:scale-105 transition duration-300">
+
+    <!-- SVG Download Icon -->
+    <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+        d="M4 16v1a2 2 0 002 2h12a2 2 0 002-2v-1M7 10l5 5 5-5M12 15V3" />
+    </svg>
+
+    <!-- Label -->
+    <span>Resume</span>
+  </a>
+</div>
+
+
+
+      <div class="container mx-auto px-0 py-2 text-center">
+        <h1 class="text-5xl font-extrabold text-blue-800">AJITH R | DATA ANALYST</h1>
+        <p class="text-xl text-gray-600 mt-2">
+          Unlocking data-driven insights with the power of Gen AI to shape smarter, faster decisions.
+        </p>
+      </div>
+
+      <div class="container mx-auto px-6 py-4 mb-8 flex justify-center space-x-4">
+       
+        <a href="home.html#skills" class="text-1xl  font-extrabold text-blue-800 bg-white px-5 py-2 rounded-full shadow-md border border-blue-800 hover:bg-blue-800 hover:text-white transition duration-300">
+          Skills
+        </a>
+        <a href="home.html#projects" class="text-1xl  font-extrabold text-blue-800 bg-white px-5 py-2 rounded-full shadow-md border border-blue-800 hover:bg-blue-800 hover:text-white transition duration-300 " >
+          Projects &amp; Experience
+        </a>
+        <a href="home.html#certifications" class="text-1xl font-extrabold text-blue-800 bg-white px-5 py-2 rounded-full shadow-md border border-blue-800 hover:bg-blue-800 hover:text-white transition duration-300">
+          Certifications
+        </a>
+        <a href="home.html#contact" class="text-1xl font-extrabold text-blue-800 bg-white px-5 py-2 rounded-full shadow-md border border-blue-800 hover:bg-blue-800 hover:text-white transition duration-300">
+          Reach out
+        </a>
+       
+      </div>
+    </header>
+  </nav>
+
+<section id="skills" class="pt-0 pb-16 bg-gradient-to-br from-gray-50 to-blue-100">
+  <!-- Header -->
+  <header class="bg-blue-700 text-white py-6 shadow-md text-center mb-10 rounded-lg ">
+    <h1 class="text-4xl font-extrabold tracking-wide">Skills</h1>
+  </header>
+
+
+  <!-- Skills Grid -->
+  <div class="max-w-6xl mx-auto grid grid-cols-2 sm:grid-cols-3 md:grid-cols-3 lg:grid-cols-5 gap-5 px-5">
+
+    <!-- Microsoft Excel -->
+    <a href="skill.html#ms-excel" class="bg-white shadow-md rounded-xl p-6 hover:shadow-lg transform transition hover:scale-105 text-center">
+      <img src="https://ts4.mm.bing.net/th?id=OIP.7PV4JWalEb86lZ8pH1U6AgHaHa&pid=15.1" 
+           alt="Excel" 
+           class="block mx-auto h-20 w-20 object-contain" />
+      <span class="mt-4 block font-semibold text-gray-800">Excel</span>
+    </a>
+
+    <!-- Python -->
+    <a href="skill.html#python" class="bg-white shadow-md rounded-xl p-6 hover:shadow-lg transform transition hover:scale-105 text-center">
+      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" 
+           alt="Python" 
+           class="block mx-auto h-20 w-20 object-contain" />
+      <span class="mt-4 block font-semibold text-gray-800">Python</span>
+    </a>
+
+    <!-- MySQL -->
+    <a href="skill.html#my-sql" class="bg-white shadow-md rounded-xl p-6 hover:shadow-lg transform transition hover:scale-105 text-center">
+      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" 
+           alt="MySQL" 
+           class="block mx-auto h-20 w-20 object-contain" />
+      <span class="mt-4 block font-semibold text-gray-800">MySQL</span>
+    </a>
+
+    <!-- Power BI -->
+    <a href="skill.html#power-bi" class="bg-white shadow-md rounded-xl p-6 hover:shadow-lg transform transition hover:scale-105 text-center">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/c/cf/New_Power_BI_Logo.svg" 
+           alt="Power BI" 
+           class="block mx-auto h-20 w-20 object-contain" />
+      <span class="mt-4 block font-semibold text-gray-800">Power BI</span>
+    </a>
+
+    <!-- Microsoft Fabric -->
+    <a href="skill.html#fabric" class="bg-white shadow-md rounded-xl p-6 hover:shadow-lg transform transition hover:scale-105 text-center">
+      <img src="data:image/webp;base64,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" 
+           alt="Microsoft Fabric" 
+           class="block mx-auto h-20 w-20 object-contain" />
+      <span class="mt-4 block font-semibold text-gray-800">Microsoft Fabric</span>
+    </a>
+
+    <!-- Tableau -->
+    <a href="skill.html#tableau" class="bg-white shadow-md rounded-xl p-6 hover:shadow-lg transform transition hover:scale-105 text-center">
+      <img src="data:image/webp;base64,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" 
+           alt="Tableau" 
+           class="block mx-auto h-20 w-20 object-contain" />
+      <span class="mt-4 block font-semibold text-gray-800">Tableau</span>
+    </a>
+    <!-- AI for Data Analyst -->
+<a href="skill.html#ai-analyst" class="bg-white shadow-md rounded-xl p-6 hover:shadow-lg transform transition hover:scale-105 text-center">
+  <img src="https://img.icons8.com/fluency/96/artificial-intelligence.png"
+       alt="AI for Data Analyst"
+       class="block mx-auto h-20 w-20 object-contain" />
+  <span class="mt-4 block font-semibold text-gray-800">AI for Data Analyst</span>
+</a>
+
+<!-- Domain Knowledge -->
+<a href="skill.html#domain-knowledge" class="bg-white shadow-md rounded-xl p-6 hover:shadow-lg transform transition hover:scale-105 text-center">
+  <img src="https://img.icons8.com/color/96/domain.png"
+       alt="Domain Knowledge"
+       class="block mx-auto h-20 w-20 object-contain" />
+  <span class="mt-4 block font-semibold text-gray-800">Domain Knowledge</span>
+</a>
+
+<!-- Presentation Skills -->
+<a href="skill.html#presentation-skills" class="bg-white shadow-md rounded-xl p-6 hover:shadow-lg transform transition hover:scale-105 text-center">
+  <img src="https://img.icons8.com/fluency/96/presentation.png"
+       alt="Presentation Skills"
+       class="block mx-auto h-20 w-20 object-contain" />
+  <span class="mt-4 block font-semibold text-gray-800">Presentation Skills</span>
+</a>
+
+<!-- Stakeholder Management -->
+<a href="skill.html#stakeholder-management" class="bg-white shadow-md rounded-xl p-6 hover:shadow-lg transform transition hover:scale-105 text-center">
+  <img src="https://img.icons8.com/fluency/96/conference-call.png"
+       alt="Stakeholder Management"
+       class="block mx-auto h-20 w-20 object-contain" />
+  <span class="mt-4 block font-semibold text-gray-800">Stakeholder Management</span>
+</a>
+
+
+  </div>
+</section>
+
+
+<section id="projects" class="py-14 bg-gradient-to-br from-gray-50 to-blue-100" tabindex="-1">
+  <header class="bg-blue-700 text-white py-6 shadow-md text-center mb-10 rounded-lg">
+    <h1 class="text-4xl font-extrabold">Projects and Experience</h1>
+  </header>
+  <div class="max-w-6xl mx-auto px-6">
+    <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-4 gap-6 justify-items-center">
+
+      <!-- Projects (1 to 12) -->
+       <!-- AtliQ Sales Report -->
+<a href="project.html#project1" class="bg-white hover:shadow-xl shadow-md rounded-xl p-4 transform transition duration-300 hover:scale-105 text-center w-full max-w-[150px]">
+  <img src="https://bing.com/th/id/BCO.5d82f9bd-e1cc-4def-adf7-163c204a7d81.png" class="w-12 mx-auto" alt="Excel" />
+<p class="mt-2 font-semibold text-sm">AtliQ Sales Dashboard</p>
+</a>
+<!-- AtliQ Finance Report -->
+<a href="project.html#project2" class="bg-white hover:shadow-xl shadow-md rounded-xl p-4 transform transition duration-300 hover:scale-105 text-center w-full max-w-[150px]">
+  <img src="https://img.icons8.com/color/48/000000/microsoft-excel-2019--v1.png" class="w-12 mx-auto" alt="Excel" />
+  <p class="mt-2 font-semibold text-sm">AtliQ Finance Report</p>
+</a>
+     
+
+<a href="project.html#project4" class="bg-white hover:shadow-xl shadow-md rounded-xl p-4 transform transition duration-300 hover:scale-105 text-center w-full max-w-[150px]">
+  <img src="https://img.icons8.com/fluency/48/000000/mysql-logo.png" class="w-12 mx-auto" alt="Excel" />
+  <p class="mt-2 font-semibold text-sm">Finance & Top N Insights</p>
+</a>
+
+<!-- Finance & Top N Insights – MySQL -->
+<a href="project.html#project5" class="bg-white hover:shadow-xl shadow-md rounded-xl p-4 transform transition duration-300 hover:scale-105 text-center w-full max-w-[150px]">
+  <img src="https://img.icons8.com/fluency/48/000000/mysql-logo.png" class="w-12 mx-auto" alt="MySQL" />
+  <p class="mt-2 font-semibold text-sm">Supply Chain Analytics</p>
+</a>
+
+
+
+
+<!-- Business Insights 360 -->
+<a href="project.html#project" class="bg-white hover:shadow-xl shadow-md rounded-xl p-4 transform transition duration-300 hover:scale-105 text-center w-full max-w-[150px]">
+  <img src="https://img.icons8.com/color/48/000000/power-bi.png" class="w-12 mx-auto" alt="Power BI" />
+  <p class="mt-2 font-semibold text-sm">Business Insights 360</p>
+</a>
+<!-- Telecom KPI Analysis – Power BI -->
+<a href="project.html#project8" class="bg-white hover:shadow-xl shadow-md rounded-xl p-4 transform transition duration-300 hover:scale-105 text-center w-full max-w-[150px]">
+  <img src="https://img.icons8.com/color/48/000000/power-bi.png" class="w-12 mx-auto" alt="Power BI" />
+  <p class="mt-2 font-semibold text-sm">Telecom KPI Analysis</p>
+</a>
+
+<!-- Insurance Industry Dashboard – Power BI -->
+<a href="project.html#project9" class="bg-white hover:shadow-xl shadow-md rounded-xl p-4 transform transition duration-300 hover:scale-105 text-center w-full max-w-[150px]">
+  <img src="https://img.icons8.com/color/48/000000/power-bi.png" class="w-12 mx-auto" alt="Power BI" />
+  <p class="mt-2 font-semibold text-sm">Insurance Industry Dashboard</p>
+</a>
+
+<!-- Microsoft Fabric Pilot Project – Power BI -->
+<a href="project.html#project10" class="bg-white hover:shadow-xl shadow-md rounded-xl p-4 transform transition duration-300 hover:scale-105 text-center w-full max-w-[150px]">
+  <img src="https://bing.com/th/id/BCO.831232bb-eac4-43e1-bfc5-e9c17aef6190.png" class="w-12 mx-auto" alt="Power BI" />
+  <p class="mt-2 font-semibold text-sm">Microsoft Fabric Pilot Project</p>
+</a>
+
+<!-- Hospitality Data Analysis – Python -->
+<a href="project.html#project6" class="bg-white hover:shadow-xl shadow-md rounded-xl p-4 transform transition duration-300 hover:scale-105 text-center w-full max-w-[150px]">
+  <img src="https://img.icons8.com/color/48/000000/python--v1.png" class="w-12 mx-auto" alt="Python" />
+  <p class="mt-2 font-semibold text-sm">Hospitality Data Analysis</p>
+</a>
+
+<!-- Expense Tracking System – Python -->
+<a href="project.html#project7" class="bg-white hover:shadow-xl shadow-md rounded-xl p-4 transform transition duration-300 hover:scale-105 text-center w-full max-w-[150px]">
+  <img src="https://bing.com/th/id/BCO.7cee4376-00d4-4e43-bd3d-797fc62c88c8.png" class="w-12 mx-auto" alt="Python" />
+  <p class="mt-2 font-semibold text-sm">Expense Tracking System</p>
+</a>
+
+      <!-- Internships (13, 14) -->
+      <a class="bg-white hover:shadow-xl shadow-md rounded-xl p-4 transform transition duration-300 hover:scale-105 text-center w-full max-w-[150px]">
+        <img src="data:image/webp;base64,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" class="w-12 mx-auto" alt="Internship 1" />
+        <p class="mt-2 font-semibold">Ongoing - project</p>
+      </a>
+      <!-- Internships (13, 14) -->
+      <a class="bg-white hover:shadow-xl shadow-md rounded-xl p-4 transform transition duration-300 hover:scale-105 text-center w-full max-w-[150px]">
+        <img src="data:image/webp;base64,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" class="w-12 mx-auto" alt="Internship 1" />
+        <p class="mt-2 font-semibold">Ongoing - Data Intern</p>
+      </a>
+
+
+
+    </div>
+  </div>
+</section>
+
+
+
+<section id="certifications" class="py-14 bg-gradient-to-br from-gray-50 to-blue-100" tabindex="-1">
+  <header class="bg-blue-700 text-white py-6 shadow-md text-center mb-10 rounded-lg">
+    <h1 class="text-4xl font-extrabold">Certifications and Graduation</h1>
+  </header>
+
+  <div class="max-w-6xl mx-auto px-6 flex flex-wrap justify-center gap-6">
+    
+    <!-- 1. Zion Matric -->
+    <a href="certification.html#section1" 
+      class="bg-white rounded-lg shadow-md p-4 hover:shadow-xl transform hover:-translate-y-1 transition duration-300 flex flex-col items-center text-center w-40">
+      <img src="https://zionschool.ac.in/_nuxt/img/zionselaiyur.c7a793c.svg" alt="Zion Matriculation School" class="w-16 h-16 mb-2" loading="lazy">
+      <p class="text-sm font-semibold">Zion Matric Hr. Sec. School</p>
+    </a>
+
+    <!-- 2. Sathyabama -->
+    <a href="certification.html#section2" 
+      class="bg-white rounded-lg shadow-md p-4 hover:shadow-xl transform hover:-translate-y-1 transition duration-300 flex flex-col items-center text-center w-40">
+      <img src="https://ts1.mm.bing.net/th?id=OIP.0a1MsYrW-n_y-42pvAmW3wHaHa&pid=15.1"   
+         alt="Sathyabama University" class="w-16 h-16 mb-2" loading="lazy">
+      <p class="text-sm font-semibold">Sathyabama University</p>
+    </a>
+
+    <!-- 3. Codebasics -->
+    <a href="certification.html#section3" 
+      class="bg-white rounded-lg shadow-md p-4 hover:shadow-xl transform hover:-translate-y-1 transition duration-300 flex flex-col items-center text-center w-40">
+      <img src="https://files.codebasics.io/v3/images/sticky-logo.svg " alt="Codebasics" class="w-16 h-16 mb-2 rounded-full" loading="lazy">
+      <p class="text-sm font-semibold">Codebasics</p>
+    </a>
+
+    <!-- 4. Anglo English Academy -->
+    <a href="certification.html#section4" 
+      class="bg-white rounded-lg shadow-md p-4 hover:shadow-xl transform hover:-translate-y-1 transition duration-300 flex flex-col items-center text-center w-40">
+      <img src="https://www.angloenglish.com/index_images/anglologo.jpg" alt="Anglo English Academy" class="w-16 h-16 mb-2" loading="lazy">
+      <p class="text-sm font-semibold">Anglo English </p>
+    </a>
+
+  </div>
+</section>
+
+
+  <section id="contact" class="py-14 bg-gradient-to-br from-gray-50 to-blue-100" tabindex="-1">
+  <header class="bg-blue-700 text-white py-6 shadow-md text-center mb-10 rounded-lg">
+    <h1 class="text-4xl font-extrabold">Reach Me</h1>
+  </header>
+
+  <div class="max-w-6xl mx-auto grid grid-cols-2 sm:grid-cols-3 md:grid-cols-6 gap-6 px-6">
+    
+    <!-- Phone -->
+    <a href="tel:+919345264522" class="bg-white hover:shadow-xl shadow-md rounded-xl p-4 transform transition duration-300 hover:scale-105 text-center">
+      <img src="https://img.icons8.com/ios-filled/50/000000/phone.png" class="w-12 mx-auto" alt="Phone" />
+      <p class="mt-2 font-semibold">Phone</p>
+    </a>
+
+    <!-- WhatsApp -->
+    <a href="https://wa.me/919345264522" target="_blank" class="bg-white hover:shadow-xl shadow-md rounded-xl p-4 transform transition duration-300 hover:scale-105 text-center">
+      <img src="https://img.icons8.com/ios-filled/50/25D366/whatsapp.png" class="w-12 mx-auto" alt="WhatsApp" />
+      <p class="mt-2 font-semibold">WhatsApp</p>
+    </a>
+
+
+    </a>
+
+    <!-- LinkedIn -->
+    <a href="https://www.linkedin.com/in/ajith-data-analyst-814845315/" target="_blank" class="bg-white hover:shadow-xl shadow-md rounded-xl p-4 transform transition duration-300 hover:scale-105 text-center">
+      <img src="https://img.icons8.com/ios-filled/50/0077B5/linkedin.png" class="w-12 mx-auto" alt="LinkedIn" />
+      <p class="mt-2 font-semibold">LinkedIn</p>
+    </a>
+
+ 
+
+    <!-- GitHub -->
+    <a href="https://github.com/ajith2139" target="_blank" class="bg-white hover:shadow-xl shadow-md rounded-xl p-4 transform transition duration-300 hover:scale-105 text-center">
+      <img src="https://img.icons8.com/ios-filled/50/000000/github.png" class="w-12 mx-auto" alt="GitHub" />
+      <p class="mt-2 font-semibold">GitHub</p>
+    </a>
+        <!-- Resume -->
+    <a href="viewmore.html" target="_blank" class="bg-white hover:shadow-xl shadow-md rounded-xl p-4 transform transition duration-300 hover:scale-105 text-center">
+      <img src="https://img.icons8.com/ios-filled/50/000000/resume.png" class="w-12 mx-auto" alt="Resume" />
+      <p class="mt-2 font-semibold">know more</p>
+   <!-- Email -->
+    <a href="mailto:ajithramesh2020@gmail.com" class="bg-white hover:shadow-xl shadow-md rounded-xl p-4 transform transition duration-300 hover:scale-105 text-center">
+      <img src="https://img.icons8.com/ios-filled/50/000000/email-open.png" class="w-12 mx-auto" alt="Email" />
+      <p class="mt-2 font-semibold">Email</p>
+    </a>
+  </div>
+</section>
+
+
+
+<!-- Floating Button -->
+<a href="#" id="scrollTopBtn" class="floating-btn fixed bottom-6 right-6 bg-blue-700 text-white px-4 py-2 rounded-full shadow-lg hover:bg-blue-800 transition duration-300 z-50 hidden">
+  ↑ Top
+</a>
+
+<!-- JavaScript -->
+<script>
+  const scrollTopBtn = document.getElementById('scrollTopBtn');
+
+  // Smooth scroll to top
+  scrollTopBtn.addEventListener('click', (e) => {
+    e.preventDefault();
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+
+    // For accessibility
+    document.body.focus();
+  });
+
+  // Show/hide button based on scroll position
+  window.addEventListener('scroll', () => {
+    if (window.scrollY > 300) {
+      scrollTopBtn.classList.remove('hidden');
+      scrollTopBtn.classList.add('flex');
+    } else {
+      scrollTopBtn.classList.remove('flex');
+      scrollTopBtn.classList.add('hidden');
+    }
+  });
+
+  // Initially hide
+  scrollTopBtn.classList.add('hidden');
+</script>
+<script>
+  document.querySelectorAll('.scroll-to-middle').forEach(link => {
+    link.addEventListener('click', function (e) {
+      e.preventDefault();
+      const targetId = this.getAttribute('href').substring(1);
+      const target = document.getElementById(targetId);
+      if (target) {
+        const rect = target.getBoundingClientRect();
+        const offset = rect.top + window.pageYOffset - (window.innerHeight / 2) + (rect.height / 2);
+        window.scrollTo({
+          top: offset,
+          behavior: 'smooth'
+        });
+      }
+    });
+  });
+</script>
+
+    <!-- Footer -->
+  <footer class="text-center py-6 bg-blue-800 text-white mt-10">
+    <p>&copy; 2025 Ajith R. All Rights Reserved.</p>
+  </footer>
+  
+</body>
+
+</html>
+
